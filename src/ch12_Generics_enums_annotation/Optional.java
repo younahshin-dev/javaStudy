@@ -1,4 +1,4 @@
-package ch12_Generics;
+package ch12_Generics_enums_annotation;
 
 public final class Optional<T> {
 	private static final Optional<?> EMPTY = new Optional<>();
