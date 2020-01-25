@@ -13,22 +13,22 @@ public class Customer implements Runnable {
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(1);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				
 			}
 			
 			String name = Thread.currentThread().getName();
-			
-			if (eatFood()) {
+			table.remove(food);
+//			if (eatFood()) {
 				System.out.println(name+" ate a "+food);
-			} else {
-				System.out.println(name+" failed to eat.");
-			}
+//			} else {
+//				System.out.println(name+" failed to eat.");
+//			}
 		}
 	}
 
-	boolean eatFood() {
-		return table.remove(food);
-	}
+	//boolean eatFood() {
+		//return table.remove(food);
+	//}
 }
