@@ -10,7 +10,7 @@ public class ThreadEx14_1 extends Thread {
 			try {
 				Thread.sleep(1000); //1초지연
 			} catch (InterruptedException e) {
-				interrupt();
+//				interrupt();
 			}
 		}
 		

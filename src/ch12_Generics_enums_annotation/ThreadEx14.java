@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class ThreadEx14 {
 	public static void main(String[] args) {
+		Thread th2 = new Thread();
 		ThreadEx14_1 th1 = new ThreadEx14_1();
 		th1.start();
 		
