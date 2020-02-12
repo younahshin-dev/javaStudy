@@ -7,15 +7,16 @@ public class ThreadEx19 {
 		ThreadEx19_2 th2 = new ThreadEx19_2();
 		
 		th1.start();
+//		th1.run();
 		th2.start();
 		
 		startTime = System.currentTimeMillis();
-		try {
-			th1.join();
-			th2.join();
-		} catch(InterruptedException e) {
+//		try {
+//			th1.join();
+//			th2.join();
+//		} catch(InterruptedException e) {
 			
-		}
+//		}
 		
 		System.out.println("요요요요 : "+(System.currentTimeMillis() - startTime));
 	}
