@@ -1,31 +1,31 @@
 package ch14_LambdaNStream;
 
 @FunctionalInterface
-interface MyFunction {
+interface MyFunction1 {
 	void run();
 }
 
 class LambdaEx1 {
-	static void execute(MyFunction f) {
+	static void execute(MyFunction1 f) {
 		f.run();
 	}
 	
-	static MyFunction getMyFunction() {
-		MyFunction f = () -> System.out.println("f3.run()");
+	static MyFunction1 getMyFunction() {
+		MyFunction1 f = () -> System.out.println("f3.run()");
 		return f;
 	}
 	
 	public static void main(String[] args) {
 		//람다식으로 MyFunction의 run()을 구현
-		MyFunction f1 = () -> System.out.println("f1.run()");
+		MyFunction1 f1 = () -> System.out.println("f1.run()");
 		
-		MyFunction f2 = new MyFunction() {
+		MyFunction1 f2 = new MyFunction1() {
 			public void run() {
 				System.out.println("f2.run()");
 			}
 		};
 		
-		MyFunction f3 = getMyFunction();
+		MyFunction1 f3 = getMyFunction();
 		
 		f1.run();
 		f2.run();
